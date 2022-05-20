@@ -16,13 +16,13 @@ pygui.ChangeLookAndFeel('Black')
 class GUI:
     def __init__(self):
         self.layout: list = [
-            [pygui.Text('Search _TERM_', size=(11, 1)),
+            [pygui.Text('Search Term', size=(11, 1)),
              pygui.Input(size=(40, 1), focus=True, key="_TERM_"),
              pygui.Radio('Contains', size=(10, 1), group_id='choice', key="_CONTAINS_", default=True),
-             pygui.Radio('_StartsWith', size=(10, 1), group_id='choice', key="_STARTSWITH_"),
+             pygui.Radio('StartsWith', size=(10, 1), group_id='choice', key="_STARTSWITH_"),
              pygui.Radio('EndsWith', size=(10, 1), group_id='choice', key="_ENDSWITH_")],
             [pygui.Text('Path', size=(11, 1)),
-             pygui.Input('/..', size=(40, 1), key="_PATH_"),
+             pygui.Input('C:/', size=(40, 1), key="_PATH_"),
              pygui.FolderBrowse('Browse', size=(10, 1)),
              pygui.Button('Re-Index', size=(10, 1), key="_IDX_"),
              pygui.Button('Search', size=(10, 1), bind_return_key=True, key="_SEARCH_")],
